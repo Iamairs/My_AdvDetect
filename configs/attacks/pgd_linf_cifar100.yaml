@@ -1,0 +1,8 @@
+attack:
+  name: pgd
+  norm: Linf
+  epsilon: 0.03137254901960784
+  step_size: 0.00784313725490196
+  steps: 20
+  random_start: true
+  n_classes: 100

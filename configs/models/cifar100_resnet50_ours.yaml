@@ -1,0 +1,3 @@
+extends: cifar100_timm_resnet50.yaml
+model:
+  activation: leaky_relu

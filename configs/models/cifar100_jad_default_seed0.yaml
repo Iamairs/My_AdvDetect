@@ -1,0 +1,4 @@
+extends: cifar100_timm_resnet50.yaml
+model:
+  checkpoint: checkpoints/jad_resnet50_cifar100/default/seed_000.pt
+  activation: relu

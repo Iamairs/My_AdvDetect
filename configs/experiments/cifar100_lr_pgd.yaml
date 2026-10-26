@@ -1,0 +1,20 @@
+extends:
+  - ../base.yaml
+  - ../datasets/cifar100.yaml
+  - ../models/cifar100_timm_resnet50.yaml
+  - ../detectors/baselines/lr_resnet50_cifar100.yaml
+  - ../attacks/pgd_linf_cifar100.yaml
+exploratory: true
+batch_size: 16
+split:
+  fit_size: 40000
+  selection_size: 8000
+  calibration_size: 2000
+limits:
+  fit: null
+  selection: null
+  calibration: null
+  test: null
+evaluation:
+  target_fpr: 0.05
+  calibrate_on_correct_only: true

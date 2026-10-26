@@ -1,0 +1,7 @@
+model:
+  arch: timm_resnet50
+  checkpoint: checkpoints/classifiers/cifar100_timm_resnet50.pt
+  num_classes: 100
+  normalize_input: true
+  input_mean: [0.485, 0.456, 0.406]
+  input_std: [0.229, 0.224, 0.225]

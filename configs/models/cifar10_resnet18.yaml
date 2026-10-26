@@ -1,0 +1,6 @@
+model:
+  arch: cifar_resnet18
+  checkpoint: checkpoints/classifiers/cifar10_resnet18.pt
+  normalize_input: true
+  input_mean: [0.4914, 0.4822, 0.4465]
+  input_std: [0.2023, 0.1994, 0.2010]

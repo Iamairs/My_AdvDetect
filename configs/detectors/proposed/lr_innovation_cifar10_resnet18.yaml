@@ -1,0 +1,25 @@
+detector:
+  name: lr_innovation
+  selected_layers:
+    - backbone.layer1.1.conv2
+    - backbone.layer2.1.conv2
+    - backbone.layer3.1.conv2
+  input_size: [1, 3, 32, 32]
+  target_dim: 512
+  hidden_dim: 2048
+  epochs: 5
+  fit_batch_size: 16
+  lr: 0.0003
+  correct_only: true
+  folds: 5
+  min_group_samples: 64
+  margin_bins: 10
+  shrinkage: 0.1
+  ridge: 0.00001
+  score_modes:
+    - mse
+    - centered_mse
+    - diag_whiten
+    - conditional_diag
+    - directional_two_sided
+    - directional_one_sided

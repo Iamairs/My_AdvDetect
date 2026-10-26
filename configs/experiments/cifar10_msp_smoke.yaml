@@ -1,0 +1,13 @@
+extends:
+  - ../base.yaml
+  - ../datasets/cifar10.yaml
+  - ../models/cifar10_resnet18.yaml
+  - ../detectors/baselines/msp.yaml
+  - ../attacks/pgd_linf.yaml
+limits:
+  fit: 128
+  selection: 64
+  calibration: 128
+  test: 128
+attack:
+  steps: 3

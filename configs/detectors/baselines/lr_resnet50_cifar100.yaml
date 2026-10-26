@@ -1,0 +1,17 @@
+detector:
+  name: lr
+  layer_seed: 42
+  selected_layers:
+    - backbone.layer2.1.conv2
+    - backbone.layer3.0.conv2
+    - backbone.layer3.5.conv2
+  input_size: [1, 3, 224, 224]
+  target_dim: 2048
+  paper_resnet50_slices: true
+  hidden_dim: 2048
+  epochs: 5
+  fit_batch_size: 16
+  lr: 0.0003
+  correct_only: true
+  shuffle_seed: 42
+  fused_adam: true

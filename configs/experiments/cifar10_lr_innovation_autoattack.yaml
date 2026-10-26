@@ -1,0 +1,3 @@
+extends:
+  - cifar10_lr_innovation_pgd.yaml
+  - ../attacks/autoattack.yaml

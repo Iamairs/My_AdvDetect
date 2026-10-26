@@ -1,0 +1,5 @@
+dataset:
+  name: cifar100
+  root: data
+  download: false
+  resize: 32

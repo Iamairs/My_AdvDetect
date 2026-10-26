@@ -1,0 +1,6 @@
+detector:
+  name: jad
+  first_layer: backbone.conv1
+  last_layer: backbone.layer4.2
+  jpeg_quality: 75
+  denominator_eps: 1.0e-8

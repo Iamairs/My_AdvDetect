@@ -1,0 +1,8 @@
+attack:
+  name: autoattack
+  norm: Linf
+  epsilon: 0.03137254901960784
+  version: standard
+  n_classes: 100
+  seed: 42
+  verbose: true

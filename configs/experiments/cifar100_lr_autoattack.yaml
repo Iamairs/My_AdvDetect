@@ -1,0 +1,4 @@
+extends:
+  - cifar100_lr_pgd.yaml
+  - ../attacks/autoattack_cifar100.yaml
+batch_size: 16

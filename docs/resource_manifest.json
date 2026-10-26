@@ -1,0 +1,65 @@
+{
+  "imported_at_utc": "2026-10-24T03:58:44.251135+00:00",
+  "files": [
+    {
+      "source": "CCDE-ID_AdvDetect/classifiers.py",
+      "destination": "src/advdetect/models/backbones.py",
+      "sha256": "f1cd233037b3fa26c161d5199e5d8fee094282d76a3cc7e9a6f16442c8eff3aa",
+      "bytes": 5422
+    },
+    {
+      "source": "CCDE-ID_AdvDetect/outputs/cifar10_smoke/classifier/checkpoints/best.pt",
+      "destination": "checkpoints/classifiers/cifar10_resnet18.pt",
+      "sha256": "d97590198806b22a668232f459da453e52c601ea7bf914fe9d51debbd1c9820b",
+      "bytes": 44772289
+    },
+    {
+      "source": "CCDE-ID_AdvDetect/data/cifar-10-batches-py/batches.meta",
+      "destination": "data/cifar-10-batches-py/batches.meta",
+      "sha256": "f962466ef690d46b226450fb9aadc74ba4bc64a76aa526b5827fe4bc5c7125cb",
+      "bytes": 158
+    },
+    {
+      "source": "CCDE-ID_AdvDetect/data/cifar-10-batches-py/test_batch",
+      "destination": "data/cifar-10-batches-py/test_batch",
+      "sha256": "f53d8d457504f7cff4ea9e021afcf0e0ad8e24a91f3fc42091b8adef61157831",
+      "bytes": 31035526
+    },
+    {
+      "source": "CCDE-ID_AdvDetect/data/cifar-10-batches-py/data_batch_1",
+      "destination": "data/cifar-10-batches-py/data_batch_1",
+      "sha256": "54636561a3ce25bd3e19253c6b0d8538147b0ae398331ac4a2d86c6d987368cd",
+      "bytes": 31035704
+    },
+    {
+      "source": "CCDE-ID_AdvDetect/data/cifar-10-batches-py/data_batch_2",
+      "destination": "data/cifar-10-batches-py/data_batch_2",
+      "sha256": "766b2cef9fbc745cf056b3152224f7cf77163b330ea9a15f9392beb8b89bc5a8",
+      "bytes": 31035320
+    },
+    {
+      "source": "CCDE-ID_AdvDetect/data/cifar-10-batches-py/data_batch_3",
+      "destination": "data/cifar-10-batches-py/data_batch_3",
+      "sha256": "0f00d98ebfb30b3ec0ad19f9756dc2630b89003e10525f5e148445e82aa6a1f9",
+      "bytes": 31035999
+    },
+    {
+      "source": "CCDE-ID_AdvDetect/data/cifar-10-batches-py/data_batch_4",
+      "destination": "data/cifar-10-batches-py/data_batch_4",
+      "sha256": "3f7bb240661948b8f4d53e36ec720d8306f5668bd0071dcb4e6c947f78e9682b",
+      "bytes": 31035696
+    },
+    {
+      "source": "CCDE-ID_AdvDetect/data/cifar-10-batches-py/data_batch_5",
+      "destination": "data/cifar-10-batches-py/data_batch_5",
+      "sha256": "d91802434d8376bbaeeadf58a737e3a1b12ac839077e931237e0dcd43adcb154",
+      "bytes": 31035623
+    },
+    {
+      "source": "CCDE-ID_AdvDetect/data/cifar-10-batches-py/readme.html",
+      "destination": "data/cifar-10-batches-py/readme.html",
+      "sha256": "4d1c3fb199d6a183ae03f5162b469d7bc04edf2fad9547bd5f224271d52f98e5",
+      "bytes": 88
+    }
+  ]
+}
