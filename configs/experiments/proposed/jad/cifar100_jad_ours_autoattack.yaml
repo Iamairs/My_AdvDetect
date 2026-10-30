@@ -1,0 +1,3 @@
+extends:
+  - cifar100_jad_ours_pgd.yaml
+  - ../../../attacks/autoattack/autoattack_cifar100.yaml

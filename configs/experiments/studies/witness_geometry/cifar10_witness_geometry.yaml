@@ -1,0 +1,18 @@
+extends: ../layer_contribution/cifar10_layer_contribution.yaml
+output_root: outputs/witness_geometry
+witness_geometry:
+  source_run: outputs/layer_contribution/20261029_210510_layer-contribution_0663ee
+  source_pool: common_pool_repaired.pt
+  normal_split: dev_threshold
+  batch_size: 64
+  pairs_per_class: 5000
+  seed: 20261031
+  small_shift_quantile: 0.05
+  high_residual_quantile: 0.95
+  relative_gap_tolerance: 0.00001
+  decomposition_tolerance: 0.0001
+  focus_variants:
+    - gap1_pca32_L4_shared
+    - gap1_pca32_L24_shared
+    - gap1_pca32_L234_shared
+    - gap1_pca32_L234_independent

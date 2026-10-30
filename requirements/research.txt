@@ -1,0 +1,4 @@
+-r ../requirements.txt
+# 在现有项目和 cv_env 之外的研究检查/绘图依赖。
+scipy>=1.10
+matplotlib>=3.7

@@ -1,0 +1,15 @@
+extends: ../mechanisms/cifar10_mechanisms_p1.yaml
+output_root: outputs/bypass_diagnosis
+diagnosis:
+  source_run: outputs/mechanisms/20261029_120109_mechanisms-p1_36b164
+  detailed_qp_steps: 5000
+  random_controls: 4
+  random_seed: 20261029
+  trajectory_checkpoints: [0, 1, 5, 10, 20]
+  variants:
+    - {name: gap1_pca32, grid: 1, pca: 32}
+    - {name: gap1_pcafull, grid: 1, pca: full}
+    - {name: grid2_pca32, grid: 2, pca: 32}
+    - {name: grid2_pcafull, grid: 2, pca: full}
+  # 在观察结果前固定：重新攻击两个保留完整PCA空间的版本及无对照干预版本。
+  reattack: [gap1_pcafull, grid2_pcafull, evidence_no_control]

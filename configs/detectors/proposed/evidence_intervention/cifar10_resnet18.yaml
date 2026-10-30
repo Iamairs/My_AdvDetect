@@ -1,0 +1,15 @@
+evidence:
+  stages:
+  - 3
+  q: 0.5
+  alpha: 0.5
+  temperature: 1.0
+  random_controls: 2
+  epochs: 30
+  train_batch_size: 128
+  learning_rate: 0.01
+  lambda_drop: 1.0
+  lambda_budget: 10.0
+  lambda_nonclass: 0.0
+  covariance_beta: 0.1
+  covariance_ridge: 1.0e-05

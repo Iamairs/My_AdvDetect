@@ -1,0 +1,45 @@
+extends:
+  - ../../../detectors/proposed/shared_reference/cifar10_resnet18.yaml
+  - ../../../detectors/proposed/evidence_intervention/cifar10_resnet18.yaml
+  - ../../../base.yaml
+  - ../../../datasets/cifar10.yaml
+  - ../../../models/cifar10/cifar10_resnet18.yaml
+  - ../../../attacks/pgd/pgd_linf.yaml
+
+model:
+  num_classes: 10
+output_root: outputs/mechanisms
+batch_size: 64
+exploratory: true
+mechanism_split:
+  model: 40000
+  dev: 5000
+  gate: 32000
+  reference: 8000
+  fit_diagnostic: 8000
+  dev_threshold: 2000
+  dev_evaluate: 1000
+evaluation:
+  target_fpr: 0.05
+  calibrate_on_correct_only: false
+adaptive_probe:
+  enabled: true
+  samples: 16
+  epsilon: 0.03137254901960784
+  step_size: 0.00392156862745098
+  steps: 20
+  restarts: 1
+  targets: 2
+  lambdas: [1.0]
+  kappa: 0.1
+  seed: 4242
+# P2 预留参数；p1 命令绝不自动启动这个大规模配置。
+adaptive_full:
+  epsilon: 0.03137254901960784
+  step_size: 0.00392156862745098
+  steps: 100
+  restarts: 5
+  targets: all
+  lambdas: [0.01, 0.1, 1.0, 10.0, 100.0]
+  kappa: 0.1
+  seed: 4242

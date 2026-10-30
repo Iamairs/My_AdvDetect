@@ -1,0 +1,21 @@
+extends:
+  - ../../../base.yaml
+  - ../../../datasets/cifar10.yaml
+  - ../../../models/cifar10/cifar10_resnet18.yaml
+  - ../../../detectors/proposed/lr_innovation/lr_innovation_cifar10_resnet18.yaml
+  - ../../../attacks/pgd/pgd_linf.yaml
+
+exploratory: true
+batch_size: 16
+split:
+  fit_size: 40000
+  selection_size: 8000
+  calibration_size: 2000
+limits:
+  fit: null
+  selection: null
+  calibration: null
+  test: null
+evaluation:
+  target_fpr: 0.05
+  calibrate_on_correct_only: true

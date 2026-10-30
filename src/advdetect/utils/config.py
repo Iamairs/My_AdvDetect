@@ -2,6 +2,7 @@ from __future__ import annotations
 
 import copy
 import os
+import warnings
 from pathlib import Path
 from typing import Any
 
@@ -35,8 +36,27 @@ def merge(base: dict, update: dict) -> dict:
 
 
 def load_config(path: str | Path, overrides: list[str] | None = None) -> dict[str, Any]:
+    def relocated(current: Path) -> Path:
+        if current.is_file():
+            return current
+        root = project_root()
+        try:
+            legacy = current.relative_to(root).as_posix()
+        except ValueError:
+            return current
+        manifest = root / "configs/legacy_paths.yaml"
+        aliases = yaml.safe_load(manifest.read_text(encoding="utf-8")) if manifest.is_file() else {}
+        if legacy not in aliases:
+            return current
+        destination = (root / aliases[legacy]).resolve()
+        destination.relative_to(root / "configs")
+        if not destination.is_file():
+            raise FileNotFoundError(f"Configuration relocation target missing: {destination}")
+        warnings.warn(f"配置已迁移：{legacy} -> {aliases[legacy]}", FutureWarning, stacklevel=3)
+        return destination
+
     def read(current: Path, stack: tuple[Path, ...]) -> dict:
-        current = current.resolve()
+        current = relocated(current.resolve())
         if current in stack:
             raise ValueError(f"Configuration inheritance cycle: {current}")
         payload = yaml.safe_load(current.read_text(encoding="utf-8")) or {}

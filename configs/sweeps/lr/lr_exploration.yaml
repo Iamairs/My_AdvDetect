@@ -1,0 +1,5 @@
+experiment: configs/experiments/baselines/lr/cifar10_lr_smoke.yaml
+grid:
+  seed: [42, 43]
+  detector.lr: [0.0001, 0.0003]
+# Exploration only. Expand sample sizes and attacks after a useful signal appears.

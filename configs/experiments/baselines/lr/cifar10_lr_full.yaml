@@ -1,0 +1,8 @@
+extends:
+  - ../../../base.yaml
+  - ../../../datasets/cifar10.yaml
+  - ../../../models/cifar10/cifar10_resnet18.yaml
+  - ../../../detectors/baselines/lr/lr.yaml
+  - ../../../attacks/pgd/pgd_linf.yaml
+# CIFAR-10/ResNet18 adaptation, not reproduction of the original benchmark table.
+exploratory: true

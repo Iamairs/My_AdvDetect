@@ -1,0 +1,5 @@
+extends:
+  - ../msp/cifar10_msp_smoke.yaml
+  - ../../../detectors/baselines/lr/lr.yaml
+detector:
+  epochs: 1

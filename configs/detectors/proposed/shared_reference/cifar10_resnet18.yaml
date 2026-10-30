@@ -1,0 +1,22 @@
+shared:
+  stages:
+  - 2
+  - 3
+  - 4
+  spatial_grid: 1
+  pca_dim: 32
+  references_per_class: 64
+  eta: 0.001
+  layer_weights:
+  - 0.3333333333333333
+  - 0.3333333333333333
+  - 0.3333333333333333
+  solver_steps: 1000
+  diagnostic_steps:
+  - 50
+  - 100
+  - 200
+  - 500
+  - 1000
+  - 2000
+  relative_gap_tolerance: 1.0e-05

@@ -18,6 +18,4 @@ outputs/*
 !outputs/README.md
 logs/
 tmp/
-scripts/continue_jad_training.ps1
-scripts/run_jad_seed0_after_training.ps1
-scripts/stop_jad_training_after_seed0.ps1
+scripts/training/jad/local/

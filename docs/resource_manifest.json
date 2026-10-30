@@ -2,12 +2,6 @@
   "imported_at_utc": "2026-10-24T03:58:44.251135+00:00",
   "files": [
     {
-      "source": "CCDE-ID_AdvDetect/classifiers.py",
-      "destination": "src/advdetect/models/backbones.py",
-      "sha256": "f1cd233037b3fa26c161d5199e5d8fee094282d76a3cc7e9a6f16442c8eff3aa",
-      "bytes": 5422
-    },
-    {
       "source": "CCDE-ID_AdvDetect/outputs/cifar10_smoke/classifier/checkpoints/best.pt",
       "destination": "checkpoints/classifiers/cifar10_resnet18.pt",
       "sha256": "d97590198806b22a668232f459da453e52c601ea7bf914fe9d51debbd1c9820b",
@@ -61,5 +55,14 @@
       "sha256": "4d1c3fb199d6a183ae03f5162b469d7bc04edf2fad9547bd5f224271d52f98e5",
       "bytes": 88
     }
-  ]
+  ],
+  "source_snapshots": [
+    {
+      "source": "CCDE-ID_AdvDetect/classifiers.py",
+      "destination": "src/advdetect/models/backbones.py",
+      "sha256": "f1cd233037b3fa26c161d5199e5d8fee094282d76a3cc7e9a6f16442c8eff3aa",
+      "bytes": 5422
+    }
+  ],
+  "source_snapshot_note": "导入时的源码快照哈希，仅保留历史出处；后续可编辑源码由运行/检查点的实现哈希绑定。files只保存不可变数据与权重资产。"
 }

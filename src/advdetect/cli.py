@@ -43,7 +43,7 @@ def main(argv: list[str] | None = None):
     }
     for name, help_text in commands.items():
         command = sub.add_parser(name, help=help_text)
-        command.add_argument("--config", default="configs/experiments/cifar10_msp_smoke.yaml")
+        command.add_argument("--config", default="configs/experiments/baselines/msp/cifar10_msp_smoke.yaml")
         command.add_argument("--set", dest="overrides", action="append", default=[], metavar="KEY=VALUE")
         if name == "evaluate":
             command.add_argument("--detector-checkpoint")

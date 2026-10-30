@@ -1,0 +1,3 @@
+extends:
+  - cifar100_jad_pgd.yaml
+  - ../../../models/cifar100/cifar100_jad_default_seed0.yaml
